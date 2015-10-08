@@ -1,0 +1,35 @@
+﻿<Window x:Class="MqttClientCsharp.MainWindow"
+        xmlns="http://schemas.microsoft.com/winfx/2006/xaml/presentation"
+        xmlns:x="http://schemas.microsoft.com/winfx/2006/xaml"
+        Title="MqttClient" Height="420" Width="600">
+    <Grid>
+        <Button x:Name="publishBtn" Content="发布消息" HorizontalAlignment="Left" Margin="476,197,0,0" VerticalAlignment="Top" Width="75" Click="publishBtn_Click"/>
+        <Label x:Name="label" Content="Topic名称：" HorizontalAlignment="Left" Margin="27,45,0,0" VerticalAlignment="Top"/>
+        <Button x:Name="subBtn" Content="添加订阅" HorizontalAlignment="Left" Margin="476,49,0,0" VerticalAlignment="Top" Width="75" Click="subBtn_Click"/>
+        <TextBox x:Name="topicTB" HorizontalAlignment="Left" Height="23" Margin="113,47,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="179"/>
+        <Label x:Name="qoslabel" Content="QOS:" HorizontalAlignment="Left" Margin="295,47,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.359,0.2"/>
+        <ComboBox x:Name="qosCB" HorizontalAlignment="Left" Margin="350,49,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.392,-0.571" SelectedIndex="0">
+            <ComboBoxItem Content="最多一次"/>
+            <ComboBoxItem Content="至少一次"/>
+            <ComboBoxItem Content="只有一次"/>
+        </ComboBox>
+        <Label x:Name="label_Copy" Content="发布Topic名称：" HorizontalAlignment="Left" Margin="8,88,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="pubTopicTB" HorizontalAlignment="Left" Height="23" Margin="114,90,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="179"/>
+        <Label x:Name="label1" Content="消息内容：" HorizontalAlignment="Left" Margin="39,126,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.129,0.44"/>
+        <TextBox x:Name="pubInfoTB" HorizontalAlignment="Left" Height="98" Margin="114,131,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="356"/>
+        <Label x:Name="label2" Content="接收消息：" HorizontalAlignment="Left" Margin="39,243,0,0" VerticalAlignment="Top" RenderTransformOrigin="0.129,-0.2"/>
+        <TextBox x:Name="recvInfoTB" HorizontalAlignment="Left" Height="116" Margin="114,243,0,0" TextWrapping="Wrap" Text="" VerticalAlignment="Top" Width="356" VerticalScrollBarVisibility="Auto"/>
+        <Label x:Name="label3" Content="Broker信息：" HorizontalAlignment="Left" Margin="20,10,0,0" VerticalAlignment="Top"/>
+        <TextBox x:Name="brokerTB" HorizontalAlignment="Left" Height="23" Margin="114,12,0,0" TextWrapping="Wrap" Text="192.168.0.112" VerticalAlignment="Top" Width="178"/>
+        <Button x:Name="connectBtn" Content="连接" HorizontalAlignment="Left" Margin="300,14,0,0" VerticalAlignment="Top" Width="55" Click="connectBtn_Click"/>
+        <TextBlock x:Name="statusTB" HorizontalAlignment="Left" Margin="422,16,0,0" TextWrapping="Wrap" Text="Broker未连接" VerticalAlignment="Top" Width="144"/>
+        <Label x:Name="qoslabel_Copy" Content="QOS:" HorizontalAlignment="Left" Margin="296,88,0,0" VerticalAlignment="Top" RenderTransformOrigin="-0.359,0.2"/>
+        <ComboBox x:Name="subQosCB" HorizontalAlignment="Left" Margin="351,90,0,0" VerticalAlignment="Top" Width="120" RenderTransformOrigin="0.392,-0.571" SelectedIndex="0">
+            <ComboBoxItem Content="最多一次"/>
+            <ComboBoxItem Content="至少一次"/>
+            <ComboBoxItem Content="只有一次"/>
+        </ComboBox>
+        <Button x:Name="disconnectBtn" Content="断开连接" HorizontalAlignment="Left" Margin="361,14,0,0" VerticalAlignment="Top" Width="55" Click="disconnectBtn_Click"/>
+        <CheckBox x:Name="hexCheckBox" Content="十六进制显示" HorizontalAlignment="Left" Margin="8,275,0,0" VerticalAlignment="Top"/>
+    </Grid>
+</Window>
